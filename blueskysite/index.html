@@ -259,11 +259,11 @@ motionAI_Init('10509?color=62a8ea&sendBtn=SEND&inputBox=Type+something...&token=
 /* you may also invoke motionAI_Open(); to manually open the modal */
 </script>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        BlueSky VR
+        BlueSky VR Channel Partner Network
       </a>
     </div>
   </div>
@@ -407,13 +407,28 @@ motionAI_Init('10509?color=62a8ea&sendBtn=SEND&inputBox=Type+something...&token=
   <script>
     var attempts = 0;
     $('#btn-login').click(function(e){
-      alert('Wrong password');
-      $('#login-password').val('');
-      attempts++;
-      if(attempts % 2 == 0)
+      var password = $('#login-password').val();
+
+      if(password !== "test1" && password !== "test2")
       {
-        motionAI_Open();
+        alert('Wrong password');
+        $('#login-password').val('');
+        attempts++;
+        if(attempts % 2 == 0)
+        {
+          motionAI_Open();
+        }
+
       }
+      else if(password === "test2") {
+        window.location.href = "partner2.html";
+      }
+      else
+      {
+        window.location.href = "partner.html";
+      }
+
+
 
     });
   </script>
